@@ -6,3 +6,9 @@ function swapInput(input) {
     return console.log(reverse.join(""));
   }
   swapInput(32);
+
+  // Without array
+  function swapInputTwo(a, b) {
+    return console.log(b.toString() + a.toString());
+  }
+  swapInputTwo(9,6);
