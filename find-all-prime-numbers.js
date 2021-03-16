@@ -22,6 +22,7 @@ function findAllPrimeNumbers(num) {
   for (let i = 2; i < num; i++) {
     for (let j = 2; j < i; j++) {
     // 1st condition
+    // If i is divisible by j and is i is not 2 the break
       if (i % j == 0 && i !== 2) {
         isNotPrime = true;
         break;
@@ -29,6 +30,7 @@ function findAllPrimeNumbers(num) {
     }
     // 2nd condition
     if (!isNotPrime) {
+      // If isNotPrime is false then log i
       console.log(i);
     }
     isNotPrime = false;
