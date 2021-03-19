@@ -15,4 +15,11 @@ function getFib(num) {
     console.log(c);
   }
 }
-getFib(10000);
+// getFib(10);
+
+// Recursive function
+  function fibRecursion(num) {
+    if (num <= 1) return 1;
+    return fibRecursion(num -1) + fibRecursion(num -2);
+  }
+console.log(fibRecursion(5)) 
