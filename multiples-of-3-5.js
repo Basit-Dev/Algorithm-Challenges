@@ -2,30 +2,13 @@
 
 // Find the sum of all the multiples of 3 or 5 below 1000.
 
-
-// function pow(x, n) {
-//     let result = 1;
-  
-//     // multiply result by x n times in the loop
-//     for (let i = 0; i < n; i++) {
-//       result *= x;
-//     }
-  
-//     return result;
-//   }
-  
-//   console.log( pow(2, 2) ); // 4
-//   console.log( pow(2, 3) ); // 8
-//   console.log( pow(2, 4) ); // 16
-
-  function pow(x, n) {
-    if (n == 1) {
-      return x;
-    } else {
-      return x * pow(x, n - 1);
-    }
+function sumOfMultiples(num) {
+  let result = 0;
+  for (let i = 1; i < num; i++) {
+    if (i % 3 == 0 || i % 5 == 0) result += i;
   }
-  
-  console.log( pow(2, 2) ); // 4
-  console.log( pow(2, 3) ); // 8
-  console.log( pow(2, 4) ); // 16
+  return result;
+}
+
+const getResult = sumOfMultiples(1000);
+console.log(getResult);
