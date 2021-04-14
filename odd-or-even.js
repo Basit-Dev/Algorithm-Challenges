@@ -10,3 +10,8 @@ function oddOrEven(array) {
   }
 }
 console.log(oddOrEven([1, 3,4]));
+
+// using the above in one line
+function oddOrEven(arr) {
+  return arr.reduce((a,b)=>a+b,0) % 2 ? 'odd' : 'even';
+}
