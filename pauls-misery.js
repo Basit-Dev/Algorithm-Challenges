@@ -22,3 +22,10 @@ function paul(x){
 // console.log(paul(['life', 'Petes kata', 'Petes kata', 'Petes kata', 'eating']))
 // console.log(paul(['Petes kata', 'Petes kata', 'eating', 'Petes kata', 'Petes kata', 'eating']))
 console.log(paul(['eating','Petes kata','eating','Petes kata','eating','kata','Petes kata','kata','kata','kata','life','eating','eating','eating','Petes kata','Petes kata','kata','kata','Pete kata','eating','eating','kata','eating','Petes kata','eating','kata','eating','life','eating','eating','kata']))
+
+// Using object and reduce 
+function paul(arr){
+    const dic = {kata: 5, 'Petes kata': 10, life: 0, eating: 1}
+    const num = arr.reduce( (a, i)=> +a + dic[i], 0)
+    return num < 40 ? 'Super happy!' : num < 70 ? 'Happy!' : num < 100 ? 'Sad!' : 'Miserable!'
+  }
