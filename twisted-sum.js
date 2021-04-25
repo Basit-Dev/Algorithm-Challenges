@@ -9,9 +9,9 @@ function twistedSum(n) {
       console.log(i);
       number += i;
     } else if (i >= 9) {
-        numToString = i.toString().split("");
+      numToString = i.toString().split("");
       for (let i = 0; i < numToString.length; i++) {
-        stringResult += parseInt(numToString[i]) 
+        stringResult += parseInt(numToString[i]);
       }
     }
   }
@@ -20,3 +20,18 @@ function twistedSum(n) {
 }
 
 console.log(twistedSum(999));
+
+// With reduce function
+
+function twistedSum(n) {
+  let sum = 0;
+
+  for (let i = 1; i <= n; i++) {
+    sum += i
+      .toString()
+      .split("")
+      .reduce((a, b) => Number(a) + Number(b), 0);
+  }
+
+  return sum;
+}
