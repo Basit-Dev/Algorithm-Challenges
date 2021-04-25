@@ -19,7 +19,7 @@ function twistedSum(n) {
   return number + stringResult;
 }
 
-console.log(twistedSum(999));
+console.log(twistedSum(12));
 
 // With reduce function
 
@@ -31,6 +31,7 @@ function twistedSum(n) {
       .toString()
       .split("")
       .reduce((a, b) => Number(a) + Number(b), 0);
+      console.log(i, sum);
   }
 
   return sum;
