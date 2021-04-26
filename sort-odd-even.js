@@ -19,5 +19,21 @@ function oddEven(input) {
   return arrayEven.concat(arrayOdd.reverse());
   //return d
 }
-
+// Refactored with 1 sort method.
+function oddEven(input) {
+    const arrayEven = [];
+    const arrayOdd = [];
+    input
+      .sort(function (a, b) {
+        return a - b;
+      })
+      .map(function (a) {
+        if (a % 2 !== 0) {
+          arrayEven.unshift(a);
+        } else {
+          arrayOdd.push(a);
+        }
+      });
+    return arrayOdd.concat(arrayEven);
+  }
 console.log(oddEven([16, 2, 11, 5, 13, 26, 7]));
