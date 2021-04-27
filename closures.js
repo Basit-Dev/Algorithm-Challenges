@@ -15,9 +15,9 @@ console.log(countingDown());
 console.log(countingDown());
 
 function countDownTwo(a,b) {
-    return function decrease() {
-        return a *= b;
-    }
+  return function decrease() {
+    return a *= b;
+  }
 }
 const countingDownTwo = countDownTwo(20, 5);
 console.log(countingDownTwo());
