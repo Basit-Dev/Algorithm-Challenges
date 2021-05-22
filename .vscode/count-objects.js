@@ -1,12 +1,11 @@
-
-
-const arr = [
-  [1, 1],
-  [2, 1],
-  [3, 3],
-  [3, 4],
-  [4, 5],
+const obj = [
+  { x: 1, y: 1 },
+  { x: 2, y: 3 },
+  { x: 3, y: 3 },
+  { x: 3, y: 4 },
+  { x: 4, y: 5 },
 ];
+
 function getCount(param) {
   let result = 0;
   param.map((element) => {
@@ -16,4 +15,14 @@ function getCount(param) {
   });
   return result;
 }
-console.log(getCount(obj));
+
+// for loop
+function getCount(objects) {
+    let count = 0;
+    for (let index in objects) {
+        if (objects[index].x == objects[index].y) {
+            count++;
+        }
+    }
+    return count;
+}
